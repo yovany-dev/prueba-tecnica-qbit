@@ -26,11 +26,23 @@ async function main() {
   const containerCard = document.getElementById('container-card');
   const inputElement = document.getElementById('input');
   const btnSort = document.getElementById('btn-sort');
+  const selectFilter = document.getElementById('select-filter');
   const cards = await getCards();
 
   let isAscending = false;
 
   render(cards);
+
+  inputElement.addEventListener('input', (event) => {
+    const filter = cards.filter((e) => {
+      return e.nombre
+        .toLowerCase()
+        .includes(event.target.value.toLowerCase().trim());
+    });
+
+    containerCard.innerHTML = '';
+    render(filter);
+  });
 
   btnSort.addEventListener('click', () => {
     const sortedData = [...cards];
@@ -50,15 +62,17 @@ async function main() {
     isAscending = !isAscending;
   });
 
-  inputElement.addEventListener('input', (event) => {
-    const filter = cards.filter((e) => {
-      return e.nombre
-        .toLowerCase()
-        .includes(event.target.value.toLowerCase().trim());
-    });
+  selectFilter.addEventListener('change', (event) => {
+    const selected = event.target.value;
+    let filtered;
 
+    if (selected == 'Todo') {
+      filtered = cards;
+    } else {
+      filtered = cards.filter((item) => item.nivel == selected);
+    }
     containerCard.innerHTML = '';
-    render(filter);
+    render(filtered);
   });
 }
 
