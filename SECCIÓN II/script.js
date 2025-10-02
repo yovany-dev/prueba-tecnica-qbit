@@ -25,9 +25,31 @@ function render(data) {
 async function main() {
   const containerCard = document.getElementById('container-card');
   const inputElement = document.getElementById('input');
+  const btnSort = document.getElementById('btn-sort');
   const cards = await getCards();
 
+  let isAscending = false;
+
   render(cards);
+
+  btnSort.addEventListener('click', () => {
+    const sortedData = [...cards];
+
+    if (isAscending) {
+      sortedData.sort(function (a, b) {
+        return a.nombre.localeCompare(b.nombre);
+      });
+    } else {
+      sortedData.sort(function (a, b) {
+        return b.nombre.localeCompare(a.nombre);
+      });
+    }
+
+    containerCard.innerHTML = '';
+    render(sortedData);
+    isAscending = !isAscending;
+  });
+
   inputElement.addEventListener('input', (event) => {
     const filter = cards.filter((e) => {
       return e.nombre
