@@ -1,11 +1,12 @@
+// Obtener lista de cursos simulando petición a una API.
 async function getCards() {
   const url = 'http://127.0.0.1:5500/SECCI%C3%93N%20II/cursos.json';
-
   const data = await fetch(url);
   const res = await data.json();
   return res.cursos;
 }
 
+// Renderiza tarjetas en el cliente.
 function render(data) {
   const containerCard = document.getElementById('container-card');
   const totalCard = document.getElementById('total-card');
@@ -22,6 +23,7 @@ function render(data) {
   totalCard.innerText = `Total de resultados: ${data.length}`;
 }
 
+// Lógica principal
 async function main() {
   const containerCard = document.getElementById('container-card');
   const inputElement = document.getElementById('input');
@@ -29,10 +31,9 @@ async function main() {
   const selectFilter = document.getElementById('select-filter');
   const cards = await getCards();
 
-  let isAscending = false;
-
   render(cards);
 
+  // Busqueda por nombre de cursos
   inputElement.addEventListener('input', (event) => {
     const filter = cards.filter((e) => {
       return e.nombre
@@ -44,7 +45,9 @@ async function main() {
     render(filter);
   });
 
+  // Ordenamiento de A-z Z-a
   btnSort.addEventListener('click', () => {
+    let isAscending = false;
     const sortedData = [...cards];
 
     if (isAscending) {
@@ -56,12 +59,12 @@ async function main() {
         return b.nombre.localeCompare(a.nombre);
       });
     }
-
     containerCard.innerHTML = '';
     render(sortedData);
     isAscending = !isAscending;
   });
 
+  // Filtrado por [Todo, Novato, Aprendiz, Conocedor]
   selectFilter.addEventListener('change', (event) => {
     const selected = event.target.value;
     let filtered;
