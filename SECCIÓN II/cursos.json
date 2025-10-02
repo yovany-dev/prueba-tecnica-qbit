@@ -1,0 +1,40 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "nombre": "Introducción a Programación",
+      "nivel": "Novato",
+      "estado": "Activo"
+    },
+    {
+      "id": 2,
+      "nombre": "Fundamentos de Java",
+      "nivel": "Aprendiz",
+      "estado": "Activo"
+    },
+    {
+      "id": 3,
+      "nombre": "HTML y CSS",
+      "nivel": "Novato",
+      "estado": "Inactivo"
+    },
+    {
+      "id": 4,
+      "nombre": "JavaScript Básico",
+      "nivel": "Aprendiz",
+      "estado": "Activo"
+    },
+    {
+      "id": 5,
+      "nombre": "SQL Inicial",
+      "nivel": "Conocedor",
+      "estado": "Activo"
+    },
+    {
+      "id": 6,
+      "nombre": "Bash Scripting",
+      "nivel": "Novato",
+      "estado": "Inactivo"
+    }
+  ]
+}
