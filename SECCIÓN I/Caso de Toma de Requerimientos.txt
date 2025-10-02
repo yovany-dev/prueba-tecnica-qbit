@@ -1,0 +1,13 @@
+Imagina que trabajas como desarrollador en un banco.
+El área de caja solicita una nueva funcionalidad:
+
+Funcionalidad: Permitir que el cajero pueda imprimir un comprobante adicional para clientes que hacen depósitos
+en efectivo mayores a Q10,000.
+
+¿Con quién deberías avocarte primero para poder levantar los requerimientos y entregar la funcionalidad al 100%?
+
+• Jefe/Gerente de Agencia, Cajero (usuario final) y Operaciones de Caja (dueño del proceso).
+• Gerente de Tecnología y Gerente Financiero, sin hablar con usuarios.
+• Cajero únicamente, porque es quien usará el sistema.
+
+Desenvuelva como fue que determino su respuesta:
