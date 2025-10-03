@@ -11,3 +11,5 @@ en efectivo mayores a Q10,000.
 • Cajero únicamente, porque es quien usará el sistema.
 
 Desenvuelva como fue que determino su respuesta:
+Hablaría con el Gerente de Tecnología y Gerente Financiero, con el Gerente de Tecnología podría hablar sobre temas más técnicos como seguridad, escalabilidad, etc. 
+Con el Gerente Financiero podría hablar temas como automatización de procesos para reducir costos, análisis de datos, etc.
