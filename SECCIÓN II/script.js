@@ -30,6 +30,7 @@ async function main() {
   const btnSort = document.getElementById('btn-sort');
   const selectFilter = document.getElementById('select-filter');
   const cards = await getCards();
+  let isAscending = false;
 
   render(cards);
 
@@ -47,7 +48,6 @@ async function main() {
 
   // Ordenamiento de A-z Z-a
   btnSort.addEventListener('click', () => {
-    let isAscending = false;
     const sortedData = [...cards];
 
     if (isAscending) {
