@@ -15,8 +15,8 @@ function render(data) {
     containerCard.innerHTML += `
       <div class="card">
         <h3>${card.nombre}</h3>
-        <h4>${card.nivel}</h4>
-        <h4>${card.estado}</h4>
+        <h4><span>Nivel:</span> ${card.nivel}</h4>
+        <h4><span>Estado:</span> ${card.estado}</h4>
       </div>
     `;
   });

@@ -7,17 +7,19 @@
     <title>SECCIÓN II</title>
   </head>
   <body>
-    <div>
+    <div class="container">
       <h1>Lista de Cursos</h1>
-      <div>
+      <div class="container-action">
         <input type="text" placeholder="Buscar por nombre" id="input" />
-        <button id="btn-sort">Sort [A-z | Z-a]</button>
-        <select id="select-filter">
-          <option value="Todo" selected>Todo</option>
-          <option value="Novato">Novato</option>
-          <option value="Aprendiz">Aprendiz</option>
-          <option value="Conocedor">Conocedor</option>
-        </select>
+        <div class="buttons">
+          <button id="btn-sort">Ordenar [A-z | Z-a]</button>
+          <select id="select-filter">
+            <option value="Todo" selected>Todo</option>
+            <option value="Novato">Novato</option>
+            <option value="Aprendiz">Aprendiz</option>
+            <option value="Conocedor">Conocedor</option>
+          </select>
+        </div>
       </div>
       <div class="container-card" id="container-card"></div>
       <p id="total-card"></p>

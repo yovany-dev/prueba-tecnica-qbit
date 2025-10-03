@@ -1,15 +1,90 @@
-/* * {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
-
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-size: 25px;
+  width: max-content;
+  border-bottom: 4px solid #48e;
+}
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.container-action {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input {
+  max-width: 250px;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+button,
+select {
+  max-width: 250px;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 5px;
+  color: #fefefe;
+  background-color: #48e;
+}
 .container-card {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
-
 .card {
-  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: #ebebeb;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 300;
+}
+span {
+  color: #48e;
+  font-weight: 400;
+}
+@media (min-width: 500px) {
+  .container-action {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+  button,
+  select {
+    width: max-content;
+  }
+}
+@media (min-width: 600px) {
+  .container-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .container-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
